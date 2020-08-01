@@ -1,0 +1,67 @@
+<%- include("partials/header", {title: "Home", stylesheet: "index"}); %>
+<%- include("partials/navbar", {authenticated: authenticated}); %>
+
+<div class="bg">
+
+
+  <!-- <img src="#" class="logo">  -->
+
+  <!-- <a href="/register" class="join">Signup/Login</a> -->
+
+  <h1 class="title">Military Connect</h1>
+
+</div>
+
+<div class="info">
+
+  <div class="card text-center">
+    <div class="card-header">
+      Stay in Touch
+    </div>
+    <div class="card-body">
+      <p class="card-text">Military Connect helps you stay in touch with loved ones at war!</p>
+      <a href="/register" class="btn btn-primary">Stay Connected</a>
+    </div>
+    <div class="card-footer text-muted">
+      Learn more about our mission below!
+    </div>
+  </div>
+
+
+  <div class="con-cards">
+    <div class="crd">
+      <div class="con-img">
+        <img src="/images/NicePng_connection-icon-png_2026385.png" alt="">
+        <!--<img class="blur" src="NicePng_connection-icon-png_2026385.png" alt="">-->
+      </div>
+      <div class="con-text">
+        <h2>Connect</h2>
+        <p>Always stay connected and certain of where your loved ones are!</p>
+      </div>
+    </div>
+
+    <div class="crd">
+      <div class="con-img">
+        <img src="/images/clipart154983.png" alt="">
+        <!--<img class="blur" src="clipart154983.png" alt="">-->
+      </div>
+      <div class="con-text">
+        <h2>Stay Safe</h2>
+        <p>With our built in location tracker, nobody will ever get lost again!</p>
+      </div>
+    </div>
+
+    <div class="crd">
+      <div class="con-img">
+        <img src="/images/torpedo.png" alt="">
+        <!--<img class="blur" src="torpedo.png" alt="">-->
+      </div>
+      <div class="con-text">
+        <h2>Be Aware</h2>
+        <p>With our missile logs, you can keep track of the missle hotspots and times!</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<%- include("partials/footer"); %>

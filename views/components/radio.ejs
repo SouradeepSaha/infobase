@@ -1,0 +1,17 @@
+<div class="form-group">
+  <label>
+    <h6><%= label %></h6>
+  </label>
+  <% if(typeof(newLine) != "undefined") { %>
+  <br>
+  <% } %>
+  
+  <% optionList.forEach(function(option) { %>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" id=`<%= label %>-<%= option %>` name="<%= name %>" class="custom-control-input">
+      <label class="custom-control-label" for=`<%= label %>-<%= option %>`><%= option %></label>
+    </div>
+  <% }) %>
+  <br>
+
+</div>

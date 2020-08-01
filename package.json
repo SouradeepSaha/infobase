@@ -1,0 +1,37 @@
+{
+  "name": "warapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-fileupload": "^1.1.7-alpha.4",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.0",
+    "http-errors": "~1.6.3",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.26",
+    "morgan": "~1.9.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.0.1",
+    "socket.io": "^2.3.0"
+  },
+  "description": "An app to connect soldiers with their family members",
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [
+    "War",
+    "connect",
+    "social"
+  ],
+  "author": "Goziem Abuah Matt Kanemy Samir Hoque Souradeep Saha",
+  "license": "ISC"
+}

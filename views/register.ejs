@@ -1,0 +1,84 @@
+<%- include("partials/header", {title: title, stylesheet: "register"}); %>
+<%- include("partials/navbar", {authenticated: false}); %>
+
+<div class="hero-container">
+
+  <div class="container-fluid px-0">
+    <h1 class="pb-5">Welcome to Konnect!</h1>
+    <div class="row">
+      <div class="col-lg-5 col-sm-12">
+        <h3 class="my-5">Login to your account</h3>
+        <% if (!(typeof(loginErr) === "undefined")) { %>
+          <div class="py-1">
+            <h3 class="pb-4">Login Failure</h3>
+            <div class="alert alert-danger" role="alert">
+              Incorrect username or password. Please try again
+            </div>
+          </div> 
+        <% } %>
+        <form action="/register/login" method="post" class="form-container">
+          
+          <%- include("components/input", {
+            id: "email", label: "Your email", name: "email", type: "email", placeholder: "Enter your email"
+          }); %>
+          <%- include("components/input", {
+            id: "password", label: "Your password", name: "password", type: "password", placeholder: "Enter your password"
+          }); %>
+          <div class="bottom">
+            <button class="btn btn-success btn-large btn-block" type="submit"><span class="bold">Login</span></button>
+          </div>
+        </form>
+      </div>
+      <div class="vl"></div>
+      <div class="col-lg-6 col-sm-12">
+        <h3 class="my-5">Create a new account</h3>
+
+        <% if (!(typeof(errors) === "undefined" || errors.length === 0)) { %>
+          <div class="py-1">
+            <h3 class="pb-4">Registration Error</h3>
+            <% errors.forEach(error => { %>
+              <div class="alert alert-danger" role="alert">
+                <%= error.msg %>
+              </div>
+            <% }); %> 
+          </div> 
+        <% } %>
+
+        <% if (!(typeof(success) === "undefined")) { %>
+          <div class="py-1">
+            <h3 class="pb-4">Registration Successful</h3>
+            <div class="alert alert-success" role="alert">
+              You have successfully registered to Konnect. Please use your email and password to log in.
+            </div>
+          </div> 
+        <% } %>
+
+        <form action="/register/register" method="post" class="form-container">
+          <%- include("components/input", {
+            id: "name", label: "Your name", name: "name", type: "text", placeholder: "Enter your name"
+          }); %>
+        
+          <%- include("components/input", {
+            id: "email", label: "Your email", name: "email", type: "email", placeholder: "Enter your email"
+          }); %>
+        
+          <%- include("components/input", {
+            id: "password", label: "Your password", name: "password", type: "password", placeholder: "Password must be between 6-16 characters in length"
+          }); %>
+        
+          <%- include("components/input", {
+            id: "passwordConfirm", label: "Confirm your password", name: "passwordConfirm", type: "password", placeholder: "Confirm your password"
+          }); %>
+         
+          <div class="bottom">
+            <button class="btn btn-success btn-large btn-block" type="submit"><span class="bold">Register</span></button>
+          </div>
+        
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer"); %>

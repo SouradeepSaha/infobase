@@ -1,0 +1,37 @@
+.profile{
+  
+  width: 100%;
+
+}
+
+.card-group {
+
+  display: flex;
+  flex-wrap: wrap;
+                           
+}
+
+.crd {
+
+  width: 50%;
+  text-decoration: none;
+  color: black;
+  display: block;
+  overflow: hidden;
+  transition: .25s ease-in-out;
+
+}
+
+.crd:hover {
+
+  text-decoration: none;
+  color: black;
+  transform: scale(0.95);
+
+}
+
+.card-img-top {
+
+  height: 25em;
+
+}
