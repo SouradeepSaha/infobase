@@ -1,0 +1,91 @@
+.main {
+    padding-top: 5%
+}
+
+
+.status {
+    border: 2px solid #42b337;
+    border-radius: 5px;
+    max-width:24%;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.jumbotron {
+    margin: 2%;
+    padding: 2%;
+    background-color: #f0fffa;
+    border: 2px solid #0c8201;
+    border-radius: 3px;
+    margin-top: 7%;
+}
+
+.row {
+    margin-left: 0px;
+}
+
+.map {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1em;
+}
+
+.col-lg-5 h6 {
+    margin-top: 1em;
+}
+
+#map {
+    height: 400px;
+}
+
+#message-container {
+    height: 350px;
+    border: 1px solid gainsboro;
+    margin-bottom: 10px;
+    overflow: auto;
+    padding: 2%;
+}
+
+.light {
+    color: grey;
+}
+
+.black {
+    color: black;
+}
+
+.green {
+    color: green;
+}
+
+.grey {
+    color: #505050;
+}
+
+.contact-img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+.contact-card{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid olive;
+    border-radius: 5px;
+    transition: linear 0.3s;
+}
+
+.contact-card:hover {
+    cursor: pointer;
+    background-color: #e7ffdb;
+}
+
+.contacts {
+    margin-top: 15%;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .status {
+        max-width: 100%;
+    }
+}

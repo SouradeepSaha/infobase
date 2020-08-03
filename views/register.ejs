@@ -4,7 +4,7 @@
 <div class="hero-container">
 
   <div class="container-fluid px-0">
-    <h1 class="pb-5">Welcome to Konnect!</h1>
+    <h1 class="pb-5">Welcome to InfoBase!</h1>
     <div class="row">
       <div class="col-lg-5 col-sm-12">
         <h3 class="my-5">Login to your account</h3>
@@ -19,10 +19,10 @@
         <form action="/register/login" method="post" class="form-container">
           
           <%- include("components/input", {
-            id: "email", label: "Your email", name: "email", type: "email", placeholder: "Enter your email"
+            id: "loginEmail", label: "Your email", name: "email", type: "email", placeholder: "Enter your email"
           }); %>
           <%- include("components/input", {
-            id: "password", label: "Your password", name: "password", type: "password", placeholder: "Enter your password"
+            id: "loginPassword", label: "Your password", name: "password", type: "password", placeholder: "Enter your password"
           }); %>
           <div class="bottom">
             <button class="btn btn-success btn-large btn-block" type="submit"><span class="bold">Login</span></button>
@@ -69,7 +69,7 @@
           <%- include("components/input", {
             id: "passwordConfirm", label: "Confirm your password", name: "passwordConfirm", type: "password", placeholder: "Confirm your password"
           }); %>
-         
+
           <div class="bottom">
             <button class="btn btn-success btn-large btn-block" type="submit"><span class="bold">Register</span></button>
           </div>

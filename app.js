@@ -11,11 +11,32 @@ const session = require("express-session");
 const cookieParser = require('cookie-parser');
 const passport = require("passport");
 const MongoStore = require('connect-mongo')(session);
+const io = require('socket.io')(5500);
+const helmet = require('helmet');
+
+const users = {};
+
+io.on('connection', socket => {
+  socket.on('send-chat-message', message => {
+    socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] });
+  });
+  socket.on('new-user', name => {
+    users[socket.id] = name;
+    socket.broadcast.emit('user-connected', name);
+  });
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('user-disconnected', users[socket.id]);
+    delete users[socket.id];
+  });
+});
 
 //Require Routes
 var indexRouter = require('./routes/index');
 var accountRouter = require('./routes/account');
 var registerRouter = require('./routes/register');
+var connectRouter = require('./routes/connect');
+var logsRouter = require('./routes/logs');
+var logRouter = require('./routes/log');
 
 var app = express();
 
@@ -29,6 +50,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(helmet());
 
 app.use(session({
   secret: process.env.SECRET,
@@ -48,6 +70,9 @@ app.use(passport.session());
 app.use('/', indexRouter);
 app.use('/account', accountRouter);
 app.use('/register', registerRouter);
+app.use('/connect', connectRouter);
+app.use('/logs', logsRouter);
+app.use('/log', logRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -60,6 +85,9 @@ const uri =
   process.env.DB_USER + ':' +
   process.env.DB_PASSWORD + '@' +
   process.env.DB_NAME + '.bu5a3.azure.mongodb.net/konnect?retryWrites=true&w=majority';
+
+// GEOCODER_PROVIDER=mapquest;
+// GEOCODER_API_KEY= VLWqUNc7vEFQDXdbcV6AsYtYXz4c5Qrc;  
 
 //mongoose options
 const options = {

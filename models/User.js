@@ -22,19 +22,7 @@ const userSchema = new mongoose.Schema({
     index: true,
     unique: [true, "Email already in use"]
   },
-  location: {
-    type: {
-      type: String, // Don't do `{ location: { type: String } }`
-      enum: ['Point'], // 'location.type' must be 'Point'
-      required: true
-    },
-    coordinates: {
-      type: [Number],
-      required: true
-    } 
-  },
   password: {type: String, required: [true, "Password Cannot be empty"]},
-  location: { type: String },
 
 });
 

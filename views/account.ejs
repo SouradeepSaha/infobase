@@ -1,35 +1,43 @@
-<%- include("partials/header", {title: title, stylesheet: "account"}); %>
+<%- include("partials/header", {title: 'My Account', stylesheet: "account"}); %>
 <%- include("partials/navbar", {authenticated: true}); %>
+<link rel="stylesheet" href="/styles/index.css">
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Welcome back, <%= User.name %>!</h1>
-    <p class="lead">Connect with your family members for free</p>
+    <h1 class="display-4">Welcome back, <%= User.name %>!</h1><br>
+    <h5>Your account dashboard</h5>
+    <h6 class="lead">Military Status: Safe<br>You have 0 unread messages<br>New predictions now available. Check out missile logs for the next missile attack time and location estimates.</h6>
   </div>
 </div>
 
 <div class="profile">
 
-  <div class="card-group">
-    <a href="/connect" class="crd">
-      <div class="card">
-        <img class="card-img-top" src="/images/Unknown.jpeg" alt="Card image cap">
-
-        <div class="card-body">
-          <h5 class="card-title">Stay in touch</h5>
-          <p class="card-text">While at war, many loved ones may become lost and assumed dead. With Military Connect we have made it our goal to ensure families are always connected to their loved ones at war!</p>
+  <div class="con-cards">
+    <a href="/connect">
+      <div class="crd">
+        <div class="con-img">
+          <img src="/images/stay in touch.png" alt="">
+          <!--<img class="blur" src="NicePng_connection-icon-png_2026385.png" alt="">-->
+        </div>
+        <div class="con-text">
+          <h2>Connect</h2>
+          <p>Always stay connected and certain of where your loved ones are!</p>
         </div>
       </div>
     </a>
-    <a href="/missle" class="crd">
-      <div class="card">
-        <img class="card-img-top" src="/images/Unknown-1.jpeg" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Missle Logs</h5>
-          <p class="card-text">While at home, the germans have been constantly air bombing many countries in europe. We have created an easy to use missle log allowing everyone to easily map out the hotspots and frequent times of missle attacks!</p>
+    <a href="/logs">
+      <div class="crd">
+        <div class="con-img">
+          <img src="/images/missle log.png" alt="">
+          <!--<img class="blur" src="clipart154983.png" alt="">-->
+        </div>
+        <div class="con-text">
+          <h2>Stay Safe</h2>
+          <p>With our built in location tracker, nobody will ever get lost again!</p>
         </div>
       </div>
     </a>
   </div>
-
 </div>
+
+<%- include("partials/footer"); %>

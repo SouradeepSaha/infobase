@@ -1,0 +1,87 @@
+<%- include("partials/header", {title: title, stylesheet: "connect"}); %>
+<%- include("partials/navbar", {authenticated: true}); %>
+
+<!-- If they are already matched with their family member at war, display the chat page thing -->
+<!-- else if they are not connected, display the connect page -->
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="dashboard">
+    <h4 id="nameCont" class="light">Welcome to Connect Dashboard, <span
+        class="display-5 black"><%= User.name.substr(0,User.name.indexOf(' ')); %></span></h4><br><br>
+
+    <h4 class="light">Your family at a glance </h4><br>
+
+    <div class="row">
+      <div class="status col-lg-3 col-sm-12">
+        <h5 class="grey">All your family members are reporting: <span class="green">safe</span></h5>
+      </div>
+
+      <div class="status col-lg-3 col-sm-12">
+        <h5 class="grey">Upcoming family events: <br><span class="display-5 black">Mom's birthday in 4 days</span></h5>
+      </div>
+
+      <div class="status col-lg-3 col-sm-12">
+        <h5 class="grey">Your local time: <br><span class="display-5 black" id="localTime">local time</span></h5>
+      </div>
+
+      <div class="status col-lg-3 col-sm-12">
+        <h5 class="grey">Time at your home: <br><span class="display-5 black" id="remoteTime">remote time</span></h5>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+  <div class="main">
+    <div class="row">
+
+      <div class="col-lg-3">
+        <h4 class="grey">Your contacts</h4>
+        <div class="contacts">
+          <div class="contact-card">
+            <img class="contact-img" src="/images/person-icon.jpg">
+            <label>Goziem, <span class="green">Online</span></label>
+          </div>
+          <div class="contact-card">
+            <img class="contact-img" src="/images/person-icon.jpg">
+            <label>Matthew, <span class="green">Online</span></label>
+          </div>
+          <div class="contact-card">
+            <img class="contact-img" src="/images/person-icon.jpg">
+            <label>Souradeep, <span class="green">Online</span></label>
+          </div>
+          <div class="contact-card">
+            <img class="contact-img" src="/images/new-contact.png">
+            <label>Add new contact</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <h4 class="grey">Your current location</h4>
+        <div id="map"></div>
+        <h6>Last updated just now</h6>
+      </div>
+
+      <div class="col-lg-4 chat">
+        <h4 class="grey">Live chat</h4>
+        <div id="message-container"></div>
+        <form action="" id="send-container">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter message" id="message-input">
+            <div class="input-group-append">
+              <button class="btn btn-outline-success" id="send-button" type="submit">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<%- include("partials/footer"); %>
+<script defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjelU1YwKuAbnbSwSbi20TXv823R2p03E&callback=initMap">
+</script>
+<script src="http://localhost:5500/socket.io/socket.io.js"></script>
+<script src="/javascripts/connect.js"></script>

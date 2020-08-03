@@ -1,6 +1,6 @@
 {
-  "name": "warapp",
-  "version": "0.0.0",
+  "name": "infobase",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -15,10 +15,12 @@
     "express-fileupload": "^1.1.7-alpha.4",
     "express-session": "^1.17.1",
     "express-validator": "^6.6.0",
+    "helmet": "^4.0.0",
     "http-errors": "~1.6.3",
     "mongodb": "^3.5.9",
     "mongoose": "^5.9.26",
     "morgan": "~1.9.1",
+    "node-geocoder": "^3.27.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1",
@@ -28,10 +30,14 @@
   "main": "app.js",
   "devDependencies": {},
   "keywords": [
-    "War",
+    "war",
     "connect",
-    "social"
+    "social",
+    "information",
+    "infobase",
+    "connection",
+    "world-war-2"
   ],
-  "author": "Goziem Abuah Matt Kanemy Samir Hoque Souradeep Saha",
+  "author": "Goziem Abuah, Matt Kanemy, Samir Hoque, Souradeep Saha",
   "license": "ISC"
 }
