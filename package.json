@@ -39,5 +39,8 @@
     "world-war-2"
   ],
   "author": "Goziem Abuah, Matt Kanemy, Samir Hoque, Souradeep Saha",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "12.18.2"
+  }
 }

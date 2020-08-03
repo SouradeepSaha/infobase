@@ -8,11 +8,15 @@
 </div>
 <%- include("partials/footer"); %>
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-<script
+<!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
+<!-- <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjelU1YwKuAbnbSwSbi20TXv823R2p03E&callback=initMap&libraries=&v=weekly"
   defer
-></script>
+></script> -->
+
+<meta http-equiv="Content-Security-Policy" content="default-src https://polyfill.io/v3/polyfill.min.js?features=default; child-src 'none'; object-src 'none'">
+
+<meta http-equiv="Content-Security-Policy" content="default-src https://maps.googleapis.com/maps/api/js?key=AIzaSyDjelU1YwKuAbnbSwSbi20TXv823R2p03E&callback=initMap&libraries=&v=weekly; child-src 'none'; object-src 'none'">
 
 <script src="javascripts/logs.js" type="text/javascript"></script>
 

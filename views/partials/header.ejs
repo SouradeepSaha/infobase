@@ -29,6 +29,14 @@
   <link rel="stylesheet" href="/styles/template.css" type="text/css">
   <link rel="stylesheet" href="/styles/<%= stylesheet %>.css" type="text/css">
 
+  
+  <!-- Scripts -->
+  <meta http-equiv="Content-Security-Policy" content="default-src https://polyfill.io/v3/polyfill.min.js?features=default; child-src 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src https://maps.googleapis.com/maps/api/js?key=AIzaSyDjelU1YwKuAbnbSwSbi20TXv823R2p03E&callback=initMap&libraries=&v=weekly; child-src 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n; child-src 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js; child-src 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js; child-src 'none'; object-src 'none'">
+
 </head>
 
 <body>
