@@ -17,8 +17,8 @@ We proud that we were able to work as a team to style an easy to use UI and buil
 We learned how to use MongoDB and nodeJs to create server side technology. We also learned how to store and process data that is input on a live map. We learned how to use sucket.io to make live chat functions and how to use API call functions in our HTML scripts In the process of making this web app, we had to research and learn more about WW2 and what both civilian and military personal went through, this helped us understand things from their point of view and made us better equipped to make this product.
 
 ## How to view/access our product
-*[Heroku][heroku]
-*[Github Repo][github]
+* [Heroku][heroku]
+* [Github Repo][github]
 
 To run the project locally, clone the repository from GitHub, extract it and cd to the appropriate directory. Then, use the commands npm install to install the dependencies and npm start to start the project.
 
