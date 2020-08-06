@@ -20,7 +20,10 @@ We learned how to use MongoDB and nodeJs to create server side technology. We al
 * [Heroku][heroku]
 * [Github Repo][github]
 
-To run the project locally, clone the repository from GitHub, extract it and cd to the appropriate directory. Then, use the commands npm install to install the dependencies and npm start to start the project.
+To run the project locally, clone the repository from GitHub, extract it and `cd` to the appropriate directory. Then, use the commands `npm install` to install the dependencies and `npm start` to start the project.
+
+**Submitted to ByteHacks2020 on [DevPost][devpost]**
 
 [heroku]: https://waterloo-infobase.herokuapp.com/
 [github]: https://github.com/SouradeepSaha/infobase
+[devpost]:https://devpost.com/software/infobase
